@@ -1,0 +1,68 @@
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+ 
+main p .precio-span{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 217, 0);
+    border-radius: 5px;
+}
+
+main p .descuento-span{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 166, 0);
+    border-radius: 5px;
+}
+
+main .precio-y-descuento .precio, main .precio-y-descuento .Cupon{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(56, 37, 37, 0);
+    margin: 15px 50px 5px 50px;
+    box-sizing: border-box;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+
+main .precio-y-descuento .precio{
+    background-color: rgb(255, 217, 0);
+}
+
+main .precio-y-descuento .Cupon{
+    background-color: rgb(255, 166, 0);
+}
+
+main .precio-y-descuento .precio:hover, main .precio-y-descuento .Cupon:hover{
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.075);
+    background-color: rgba(0, 0, 0, 0.007);
+    background-color: #F0ECCF;
+ }
+
+ main .boton-resultado, main .boton-refrescar{
+    width: 80px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(252, 184, 81);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+ }
+
+ main .boton-resultado:hover, main .boton-refrescar:hover{
+    background-color: rgb(250, 204, 136);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.089);
+ }
+
+ main .p-resultado{
+    color: rgb(252, 184, 81);
+ }
+
+ .inactive{
+    display: none;
+ }
