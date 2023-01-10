@@ -64,12 +64,83 @@ function calcularModa(arr){
             listaCount[elemento] =  1
         }
         
-        console.log(arr[i])
+        // console.log(arr[i])
     }
 
+    
+
+    const listaArray = Object.entries(listaCount)
+    const listaOrdenada = ordenarListaBidimencional(listaArray, 1)
+    const ListaOrdenadaMaxNumber = listaOrdenada[listaOrdenada.length - 1]
+    console.group("Analisis de cual tiene mas repeticiones")
     console.log(listaCount)
+    console.groupEnd("Analisis de cual tiene mas repeticiones")
+
+    console.group("Agarrando los resultados y se separan cada uno en un array diferente")
+    console.log(listaArray)
+    console.groupEnd("Agarrando los resultados y se separan cada uno en un array diferente")
+
+    console.group("ordena la lista de arrays y las devuelve de menor a mayor")
+    console.log(listaOrdenada) 
+    console.groupEnd("ordena la lista de arrays y las devuelve de menor a mayor")
+
+    console.group("Numero mas repetido")
+    console.log(ListaOrdenadaMaxNumber)
+    console.groupEnd("Numero mas repetido")
+
+    const moda = "El Elemento que mas se repite (la moda) es " + ListaOrdenadaMaxNumber[0] + ", Llegandose a repetir " + ListaOrdenadaMaxNumber[1] + " veces"
+    return moda
+}
+
+//Esta funcion ordena los elementos de una lista bidimensional (arrays dentro de otros arrays), y los devulve ordenados, esta lista nos va a servir para los resultados de la moda, ordenando cual se repite mas en mayor hasta el que menos se repite, agarra cada array adentro y lo compara con el elemento que diga cuantas veces se repite
+function ordenarListaBidimencional(arrayDesordenado, i){
+    //esta funcion de sort busca el elemento los compara y los ordena, como se puede ver tiene una especie de indentificador de index, esto es para ver la posicion en la que sabesmos que se coloca el elemento (que vendria siendo la segunda posicion del array, que obviamente se expresa [1], y lo compara con el siguiente)
+    function ordenarListaSort(valorAcumulado, nuevoValor){
+        return valorAcumulado[i] - nuevoValor[i]
+    }
+
+    // aca se llamo y se devuelve a una variable y la retorna
+    const lista = arrayDesordenado.sort(ordenarListaSort)
+    return lista
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+//HAY ALGUNOS METODOS PARA OBJETOS MODERNOS, QUE NOS PERMITEN SUSTRAER ELEMENTOS EN EL OBJETO
+const obj = {a: 1, b: 2, C:3}
+
+//Object.keys(obj), este metodo nos trae con todas las "llaves" o nombres de los valores de los elemntos en el objeto
+Object.keys(obj)
+
+//Object.values(obj), este nor trae los valores de cada elemento del objeto
+Object.values(obj)
+
+//Object.entries(), este nos devuelve cada elemento en array, osea un array de arrays, mas precisamente cada elemento en el objeto lo agarra, lo corta y lo vuelve un array dentro del propio array de la variable asignada... por ejemplo si hay 20 elemento en el objeto, hace un array que cada elemento de mismo son otros 20 arrays
+Object.entries(obj)
 
