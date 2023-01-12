@@ -58,3 +58,62 @@ function proyeccionPorPersona(nombrePersona){
     return nuevoSalario
    
 }
+
+
+// Analisis empresarial
+const empresas = {}
+for(persona of salarios){
+    for(trabajo of persona.trabajos){
+        if(!empresas[trabajo.empresa]){
+            empresas[trabajo.empresa] = {}
+        }
+
+        if(!empresas[trabajo.empresa][trabajo.year]){
+             empresas[trabajo.empresa][trabajo.year] = []
+         }
+         
+        // console.group("trabajos")
+        // console.log(trabajo)
+        // console.groupEnd("trabajos")
+
+        empresas[trabajo.empresa][trabajo.year].push(trabajo.salario)
+    }
+    // console.log(persona)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Mi solucion
+// function encontrarTrabajadoresDeEmpresa(nombreDeEmpresa){
+//     let miembrosEmpresa = []
+//     for(let i = 0; i < salarios.length; i++ ){
+//         for(let a = 0; a < salarios[i].trabajos.length; a++){
+//             if(salarios[i].trabajos[a].empresa == nombreDeEmpresa){
+//                 miembrosEmpresa.push(salarios[i].trabajos[a])
+//             } 
+//         }
+       
+//     }
+
+//     console.log(miembrosEmpresa)
+// }
