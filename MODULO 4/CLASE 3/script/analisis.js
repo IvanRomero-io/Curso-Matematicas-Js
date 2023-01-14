@@ -132,7 +132,7 @@ function proyeccionPorEmpresa(nombre){
 }
 
 
-function salarioMasBajoEmpresa(nombre){
+function proyeccionSalarioMasBajoEmpresa(nombre){
     let salariosBajos = []
     if(!empresas[nombre]){
         console.warn("La empresa no existe")
@@ -178,7 +178,52 @@ function salarioMasBajoEmpresa(nombre){
 }
 
 
+function proyeccionSalarioMasAlto(nombre){
+    let salariosAltos = []
 
+    if(!empresas[nombre]){
+        console.warn("La empresa no existe")
+        return
+    }else{
+       const empresaYears =  Object.keys(empresas[nombre])
+    
+       for(let i = 0; i < empresaYears.length ;i++){
+        let alto = PlatziMath.ordenarLista(empresas[nombre][empresaYears[i]])
+        
+        salariosAltos.push(alto[alto.length - 1])
+       }
+       console.log(salariosAltos)
+       console.log(empresaYears)
+    }
+
+    let porcetajesCrecimiento = []
+
+       for(let i = 1; i < salariosAltos.length ;i++){
+        const salarioActual = salariosAltos[i]
+        const salarioPasado = salariosAltos[i - 1 ]
+        const crecimientoSalarial = salarioActual - salarioPasado
+        
+        const unPorcentajeCrecimiento = crecimientoSalarial / salarioPasado
+
+        porcetajesCrecimiento.push(unPorcentajeCrecimiento)
+       }
+
+    console.log(porcetajesCrecimiento)
+
+    const medianaPorcentajesCrecimiento = PlatziMath.calcularMediana(porcetajesCrecimiento)
+
+    console.log(medianaPorcentajesCrecimiento)
+
+    const ultimaMedianaAlta = salariosAltos[salariosAltos.length - 1]
+    const aumento = ultimaMedianaAlta * medianaPorcentajesCrecimiento
+    const nuevaMediana = ultimaMedianaAlta + aumento
+    
+    console.log({ultimaMedianaAlta, aumento, nuevaMediana})
+
+    return parseFloat(nuevaMediana.toFixed(2))
+
+
+}
 
 
 
