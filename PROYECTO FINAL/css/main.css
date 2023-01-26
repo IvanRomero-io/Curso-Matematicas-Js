@@ -1,0 +1,600 @@
+:root{
+    --black: #000000;
+    --white: #FFFFFF;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --light-grey: #B5B2B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body nav{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 12vh;
+    background-color: #100F0F;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.363);
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 3;
+   
+
+}
+
+body nav div{
+    width: 25%;
+    height: 80%;
+    margin: 8px 0px 5px 0px;
+   
+}
+
+body nav .Logo-nav {
+    display: flex;
+    justify-content: center;
+}
+
+body nav .Logo-nav > div > img{
+    width: 50px;
+    height: 50px;
+}
+
+body nav .Logo-nav > div{
+    display: flex;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgba(0, 255, 255, 0.219);
+}
+
+body nav .Logo-nav p{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--lg);
+    font-weight: 600;
+    color: var(--white);
+    margin: 10px;
+    width: 70%;
+    height: 80%;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+}
+
+body nav .Content-nav{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+body nav .Content-nav button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:  var(--white);
+    border: none;
+    width: 70px;
+    height: 30px;
+    margin: 25px;
+    border-radius: 5px;
+    background-color: #100F0F;
+    font-size: var(--md);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body nav .Content-nav .__Inicio:hover, body nav .Content-nav .__Acceso:hover{
+    background-color: #735F32;
+}
+
+body nav .Informacion-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+body nav .Informacion-nav button{
+    color: var(--white);
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin: 25px 0px 25px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: var(--md);
+    background-color: #100F0F;
+    cursor: pointer;
+}
+
+body nav .Informacion-nav .__ayuda:hover, body nav .Informacion-nav .__nosotros:hover{
+    background-color: #735F32;
+ }
+
+/* INICIO DE CUERPO DE PAGINA */
+
+main{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+    display: flex;
+    
+}
+
+main aside{
+   box-sizing: border-box;
+    background-color: var(--black);
+    width: 15vw;
+    height: 88vh;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.24);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+main aside button{
+    color: var(--white);
+    font-weight: 600;
+    height: 25vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+main aside > .boton1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/persona.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.3px black;
+    backdrop-filter: blur(6px);
+}
+
+
+
+main aside .boton1:hover{
+    background-image: url(./assets/persona.jpg);
+    background-size: cover;
+    border-radius: 5px;
+} 
+
+main aside .boton2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/empresa.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px black;
+    
+}
+
+main aside .boton2:hover{
+    background-image:url(./assets/empresa.jpg);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+ main aside .boton3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/ciudad.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px black;
+}
+
+main aside .boton3:hover{
+    background-image: url(./assets/ciudad.jpg);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+main aside .boton4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/industrias.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px black;
+}
+
+main aside .boton4:hover{
+    background-image:url(./assets/industrias.jpg);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+
+main section {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 85vw;
+    height: 88vh;
+    background-color: rgb(137, 147, 161);
+
+    display: flex;
+}
+
+/** CUERPO CENTRAS Y SWICHEOS **/
+
+.inactive{
+    display: none;
+}
+
+main .cuerpo-central > div{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* padding: 5px 10px 5px 10px; */
+    color: var(--white);
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* main .cuerpo-central > div > p{
+    font-size: var(--lg);
+} */
+
+
+main .cuerpo-central .home{
+    background-color: rebeccapurple;
+}
+
+main .cuerpo-central .home .__inicioInfo, main .cuerpo-central .Ayuda .__preguntas{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .cuerpo-central .home .__inicioInfo div, main .cuerpo-central .Ayuda .__preguntas > div{
+    width: 80%;
+    height: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: var(--md);
+    font-weight: 400;
+}
+
+cuerpo-central .Ayuda .__preguntas > div > div  p span{
+    font-size: var(--sm)
+}
+
+main .cuerpo-central .Ayuda > .__preguntas div > h3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+main .cuerpo-central > .analisis-personas > .__persona-content, main .cuerpo-central > .analisis-empresa > .__CompanyContent,  main .cuerpo-central > .analisis-ciudad > .__DatosPoblacion, main .cuerpo-central > .analisis-industrias > .__datosIndustrias{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #735F32;
+    display: flex;
+    flex-direction: column;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__titulo, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__titulo, main .cuerpo-central > .analisis-ciudad > .__DatosPoblacion > .__titulo, main .cuerpo-central > .analisis-industrias > .__datosIndustrias > .__titulo{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    background-color: var(--black);
+    padding-left: 5%;
+    padding-bottom: 5px;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos{
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index{
+    box-sizing: border-box;
+    width: 50%;
+    height: 120px;
+    background-color: #000000;
+    padding: 10px 10px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index > .inputNombresPersonas, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index > .inputNombresEmpresas{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-top: 8px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    color: var(--black);
+    box-shadow: 2px 2px rgba(187, 187, 187, 0.445);
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index > .inputNombresPersonas:hover, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index > .inputNombresEmpresas:hover{
+    background-color: #735F32;
+    color: var(--white);
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index > .nameButton, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index > .nameButtonCompanies{
+    margin-top: 15px;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #735F32;
+    color: var(--white);
+    
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index > .nameButton:hover,  main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index > .nameButtonCompanies:hover, main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__button > button:hover{
+    background-color: #bb9a4d;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__datosPersona, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__datosEmpresa{
+    width: 50%;
+    height: 120px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+} 
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__datosPersona > p{
+    margin: 2px;
+}
+
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent {
+    width: 100%;
+    height: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent > div, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > div{
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    background-color: var(--black);
+    
+    
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent > .__columInformation1, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > .__columInformation1 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent > .__columInformation1 > p, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > .__columInformation1 > p{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 100px;
+    justify-content: center;
+}
+
+main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > .__columInformation1 > p:nth-child(3){
+    height: 35%;
+}
+
+
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent > .__columInformation2, 
+main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > .__columInformation2{
+    background: var(--black);
+}
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__mainPersonaContent > .__columInformation2 > p, main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__mainEmpresaContent > .__columInformation2 > p{
+    box-sizing: border-box;
+    width: 100%;
+    height: 33%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+main .cuerpo-central > .analisis-personas > .__persona-content > .__introDatos > .__index > .nameButton:active,  main .cuerpo-central > .analisis-empresa > .__CompanyContent > .__introDatos > .__index > .nameButtonCompanies:active, main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__button > button:active{
+    background-color: #7c5802;
+}
+
+
+
+
+
+main .cuerpo-central .analisis-industrias{
+    background-color: yellow;
+}
+
+
+/* Seccion de comparacion de la ciudad en general */
+
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes{
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    padding: 0;
+    background-color: var(--black);
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__generalMedia{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__subtitulo{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__inputbars{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__inputbars > input{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+
+    border: none;
+    outline: none;
+
+    margin: 20px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    color: var(--black);
+    box-shadow: 2px 2px rgba(187, 187, 187, 0.445);
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__inputbars > input:hover{
+    background-color: #735F32;
+    color: var(--white);
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__button{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__IntroPorcentajes > .__porcentajes > .__button > button{
+    margin-top: -10px;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #735F32;
+    color: var(--white);
+    
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black)
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__top-alto-y-bajo{
+    width: 100%;
+    height: 55%;
+    display: flex;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__top-alto-y-bajo > div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+/* main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__top-alto-y-bajo > .top-bajo-columna{
+    background-color: blue;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__top-alto-y-bajo > .top-alto-columna{
+    background-color: purple;
+    border-left: 1px solid orange;
+} */
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__Comparaciones{
+    box-sizing: border-box;
+    width: 100%;
+    height: 35%;
+    display: flex;
+}
+
+main .cuerpo-central  > .analisis-ciudad > .__DatosPoblacion > .__MainPorcentajes > .__Comparaciones > div{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    padding: 0px 0px 0px 30px;
+    box-sizing: border-box;
+}
+
+
+main .cuerpo-central > .analisis-industrias > .__datosIndustrias > .__mainIndustrias{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: flex;
+}
+
+main .cuerpo-central > .analisis-industrias > .__datosIndustrias > .__mainIndustrias > .rankinglistDiv{
+    width: 40%;
+    height: 100%;
+    /* overflow-y: scroll; */
+    padding-left: 55px;
+}
+
+
+main .cuerpo-central > .analisis-industrias > .__datosIndustrias > .__mainIndustrias > .industriaInfo{
+    width: 60%;
+    height: 100%;
+    background-color: var(--black);
+}

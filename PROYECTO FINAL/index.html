@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Freak-Analitics</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <nav>
+            <div class="Logo-nav">
+                <div>
+                    <!-- <span>*LOGO*</span> -->
+                    <img src="./css/assets/Logo-proyecto-estadistica.png" alt="Logo"> 
+                </div>
+                <p>Freak-Analitics</p>
+            </div>
+            <div class="Content-nav">
+                <button class="__Inicio">Inicio</button>
+                <button class="__Acceso">Acceso</button>
+            </div>
+            <div class="Informacion-nav">
+                <button class="__ayuda">Ayuda</button>
+                <button class="__nosotros">About Us</button>
+            </div>
+        </nav>
+    
+        <main>
+            <aside class="botones-de-estadisticas">
+                <Button class="boton1">DATOS POR PERSONA</Button>
+                <Button class="boton2">DATOS POR EMPRESA</Button>
+                <Button class="boton3">DATOS POBLACION POR CIUDAD</Button>
+                <Button class="boton4">DATOS INDUSTRIALES</Button>
+            </aside>
+            <section class="cuerpo-central">
+                <div class="home">
+                    <div class="__inicioInfo">
+                        <h2>Bienvenido a Freak-Analitics</h2>
+                        <div>
+                            <p>Esta es una applicacion que te permite poder calcular y comparar la media de salarios de una persona individual, una Empresa, una ciudad y los datos totales de toda la  industria.
+                            </p>
+                            <p>Todos los datos se basan en la empresa donde trabajan, el año y sus ingresos mensuales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analisis-personas inactive">
+                    <div class="__persona-content"> 
+                        <div class="__titulo">
+                            <h1>
+                                Datos Por Persona
+                            </h1>
+                        </div>
+
+                        <div class="__introDatos">
+                            <div class="__index">
+                                Elige una persona que quieras analizar 
+                                <input list="cursos" class="inputNombresPersonas" placeholder="Ingresa el nombre">
+                                <datalist id="cursos" class="opciones">
+                                    <!-- <option value="Javascript"></option>
+                                    <option value="HTML5"></option>
+                                    <option value="CSS3"></option>
+                                    <option value="Web standars"></option> -->
+                                </datalist>
+                                </datalist>
+                                <button class="nameButton">Calcular</button>
+                            </div>
+                            <div class="__datosPersona">
+                               <p class="personaSelectaP">...</p>
+                               <p class="ultimoEmpleoP" ></p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="__mainPersonaContent">
+                            <div class="__columInformation1">
+                                <p class="salarios-por-año"></p>
+                                <p class="empresas-por-año"></p>
+                            </div>
+                            <div class="__columInformation2">
+                                <p class="mediana-por-años"></p>
+                                <p class="proyeccion"></p>
+                                <p class="dif-salarios"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analisis-empresa inactive">
+                    <div class="__CompanyContent"> 
+                        <div class="__titulo">
+                            <h1>Datos Por Empresa</h1>
+                        </div>
+                        
+                        <div class="__introDatos">
+                            <div class="__index">
+                                Elige una empresa que quieras analizar 
+                                <input list="cursosEmpresas" class="inputNombresEmpresas" placeholder="Ingresa el nombre">
+                                <datalist id="cursosEmpresas" class="opcionesEmpresas">
+
+                                </datalist>
+                                </datalist>
+                                <button class="nameButtonCompanies">Calcular</button>
+                            </div>
+                            <div class="__datosEmpresa">
+                               <p class="EmpresaSelectaP">...</p>
+                            </div>
+                        </div>
+
+                        <div class="__mainEmpresaContent"> 
+                            <div class="__columInformation1">
+                                <p class="salariosPerYear"></p>
+                                <p class="medianaEmpresa"></p>
+                                <p class="proyectionEmpresa"></p>
+                            </div>
+                            <div class="__columInformation2">
+                                <p class="proyeccion-salarios-mas-bajo "></p>
+                                <p class="proyeccion-salarios-mas-altos"></p>
+                                <p class="diffProyecciones"></p>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+
+                <div class="analisis-ciudad inactive">
+                    <div class="__DatosPoblacion">
+
+                        <div class="__titulo">
+                            <h1>Analisis Por Ciudad</h1>
+                        </div>
+                        
+                        <div class="__IntroPorcentajes">
+                            <div class="__porcentajes">
+                                <div class="__subtitulo">
+                                    Ingresa un % bajo y un % Alto
+                                </div>
+                                <div class="__inputbars">
+                                    <input class="input-porcentaje-bajo" type="number" placeholder="% para ingresos bajos">
+                                    <input class="input-porcentaje-alto" type="number" placeholder="% para ingresos Altos">
+                                </div>
+                                <div class="__button">
+                                    <button class="buttoncalcularPerCent">Calcular</button>
+                                </div>
+
+                            </div>
+                            <div class="__generalMedia">
+                                <p class="media-General-P">...</p>
+                            </div>
+                        </div>
+
+                        <div class="__MainPorcentajes">
+                            <div class="__top-alto-y-bajo">
+                                <div class="top-bajo-columna">
+                                    <p class="media-top-bajo"></p>
+                                    <p class="cantidad-de-integrantes-top-bajo"></p>
+                                </div>
+                                <div class="top-alto-columna">
+                                    <p class="media-top-alto"></p>
+                                    <p class="cantidad-de-integrantes-top-alto"></p>
+                                </div>
+                            </div>
+                            <div class="__Comparaciones">
+                                <div class="brecha-salarial">
+                                    <p class="brecha"></p>
+                                </div>
+                                <div class="diferencia-salarial">
+                                    <p class="diferencia-en-proporcion"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analisis-industrias inactive">
+                    <div class="__datosIndustrias">
+                        <div class="__titulo">
+                            <h1>Analisis Industrial</h1>
+                        </div>
+
+                        <div class="__mainIndustrias">
+                            <div class="rankinglistDiv">
+                                <h3>Ranking de medianas de empresas</h3>
+                                <p class="p-ranking">AAAAA</p>
+                            </div>
+                            <div class="industriaInfo">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="Ayuda inactive">
+                    
+                    <div class="__preguntas">
+                        <h1>Ayuda</h1>
+                        <div>
+                            <h3>PREGUNTAS FRECUENTES</h3>
+                            <div>
+                                <p>Para que sirve esta Web? <br>
+                                <span>
+                                    Con esta web puedes sacar promedios y medias de distintos valores de la sociedad
+                                </span>
+                                </p>
+
+                                <p>
+                                   Como puedo usar la Web?
+                                   <br>
+                                   Desplazate por las opciones en el aside izquierdo para navegar por los tipos de calculos
+                                </p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+     <script src="./scripts/platziMath.js"></script>
+     <script src="./scripts/NombresYtrabajos.js"></script>
+     <script src="./scripts/analisis.js"></script>
+     <script src="./scripts/utilidades.js"></script>
+     <script src="./scripts/coneccionArrat.js" > </script>
+    </body>
+</html>
+
+<!-- <h1>Bienvenido a Freak-Analitics, Todo el mundo en stadistica</h1> -->
